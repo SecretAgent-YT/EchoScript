@@ -82,7 +82,7 @@ public class ScriptParser {
 										args[i] = ScriptString.parse(string);
 									} else {
 										try {
-											args[i] = string;
+											args[i] = String.valueOf(Double.parseDouble(string));
 										} catch(Exception e) {
 											System.out.println("Syntax Error: Method is not used correctly at line " + line);
 											return;
@@ -189,7 +189,7 @@ public class ScriptParser {
 									args[i] = ScriptString.parse(string);
 								} else {
 									try {
-										args[i] = string;
+										args[i] = String.valueOf(Double.parseDouble(string));
 									} catch(Exception e) {
 										System.out.println("Syntax Error: Method is not used correctly at line " + line);
 										return;
