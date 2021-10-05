@@ -54,7 +54,7 @@ public class ScriptParser {
 	}
 	
 	private void onLine(String s, int line) {
-		if (methodlines.contains(line) || s.equals("")) return;
+		if (methodlines.contains(line) || s.equals("") || s.startsWith("#")) return;
 		if (s.startsWith("var")) {
 			String[] strings = s.split(" ");
 			for (ScriptClass clazz : ClassManager.classes) {
